@@ -18,9 +18,10 @@
     "url": "https://github.com/AMANPAL2166/Ecommerce-2026/issues"
   },
   "homepage": "https://github.com/AMANPAL2166/Ecommerce-2026#readme",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

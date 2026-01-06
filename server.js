@@ -4,7 +4,7 @@ const app = express()
 
 //rest api
 app.get('/', (req, res) => {
-  res.send( `<h1>Welcome to our ecommerce site</h1>`)
+  res.send( `<h1>what the fuck is ecommerce website</h1>`)
 })
 //Port 
 const PORT = process.env.PORT || 8080
