@@ -15,6 +15,29 @@ export const registerController = async(req,res) =>{
         if(!phone){
             return res.send({message:'Phone number must be at least 10 digits long'})
         }
+        if(!address){
+            return res.send({message:'Address is required'})
+        }   
+        //checking user
+        const existingUser = await userModel.findOne({email})
+
+        //existing user
+        if(existingUser){
+            return res.status(200).send({
+                success:false,
+                message:'Already registered please login'
+            })
+        }
+        //register user
+        const hashedPassword = await hashPassword(password)
+        //save
+        const user = new userModel({name,email,phone,address,password:hashedPassword}).save()
+        res.status(201).send({
+            success:true,
+            message:'User registered successfully',
+            user
+        })
+
 
     }catch(error){
         console.log(error)
