@@ -1,9 +1,10 @@
 //some bugs in this file trying to fix....
-// import express from "express"
+import express from "express";
 // import colours from "color"
 import dotenv from "dotenv"
 import morgan from "morgan"
-import connectDB from "./config/db.js"
+import connectDB from './config/db.js';
+
 import authroutes from "./routes/authRoutes.js"
 
 //configure env

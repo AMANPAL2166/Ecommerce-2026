@@ -1,4 +1,4 @@
-import userModel from '../models/userModel.js';
+import usermodels  from '../model/usermodels.js'
 export const registerController = async(req,res) =>{
     try{
         const {name,email,password}= req.body   
